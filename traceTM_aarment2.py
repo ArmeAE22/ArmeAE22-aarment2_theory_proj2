@@ -118,17 +118,17 @@ def output(NTM_name, input_string, accept, depth, transitions_count, accepted, p
         print(f"String rejected in {max_depth} steps")
 
 
-# Main function with inputs: name of file, input string, "termination" flag
+# Main function with inputs: name of file, "termination" flag, stdin
 def main():
     # Error check
-    if len(sys.argv) < 4:
-        print("Invalid Command Line Arguments")
+    if len(sys.argv) < 3:
+        print("USAGE: python3 ./traceTM_aarment2.py {csv file} {termination flag} < {input file}")
+        print("\nEXAMPLE: python3 ./traceTM_aarment2.py abc_star.csv 20 < input_abc_star.txt")
         sys.exit(1)
 
     # Command Line arguments
     NTM_file = sys.argv[1]
-    input_string = sys.argv[2]
-    flag = int(sys.argv[3])
+    flag = int(sys.argv[2])
 
     # open file and parse info
     with open(sys.argv[1], 'r') as file:
@@ -147,15 +147,6 @@ def main():
     
     transitions = parse_transitions(transitions_list)   # Parse transition function
 
-    accepted, path, transitions_count, max_depth = traverse_NTM(start, accept, transitions, input_string, flag)
-
-    if path:
-        depth = len(path)
-    else:
-        depth = 0
-
-    output(NTM_name, input_string, accept, depth, transitions_count, accepted, path, max_depth, flag)
-
     for line in sys.stdin:
         input_string = line.strip()
         accepted, path, transitions_count, max_depth = traverse_NTM(start, accept, transitions, input_string, flag)
@@ -167,8 +158,6 @@ def main():
 
         output(" ", input_string, accept, depth, transitions_count, accepted, path, max_depth, flag)
         print()
-
-
 
 
 if __name__ == '__main__':
