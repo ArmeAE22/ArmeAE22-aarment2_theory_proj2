@@ -129,7 +129,7 @@ def output(NTM_name, input_string, accept, depth, transitions_count, accepted, p
             if state == accept:
                 print(f"   {input_string}_ qacc")
                 continue
-            print(f"   {left_tape} {state} {right_tape[0] if right_tape else '_'}")
+            print(f"   {left_tape} {state} {right_tape if right_tape else '_'}")
     elif transitions_count >= flag:
         print(f"Execution stopped after {flag} steps")
     else:
