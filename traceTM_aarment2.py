@@ -81,24 +81,6 @@ def traverse_NTM(start, accept, transitions, input_string, flag):
                 else:
                     new_left += new_right[0]
                     new_right = new_right[1:]
-            
-            '''
-            new_left = left_tape
-            new_right = right_tape[1:]
-
-            # Move tape head based on direction
-            if direction == 'L':
-                new_right = tape_c + new_right
-                if new_left:
-                    new_left = new_left[:1]
-                    new_right = new_left[-1] + new_right
-                else:
-                    new_left = ""
-            elif direction == 'R':
-                new_left = tape_c + new_left
-                if not new_right:
-                    new_right = new_right + "_" # Only add _ if it's the end of right side of tape
-            '''
 
             new_config = [new_left, next_q, new_right]
 
