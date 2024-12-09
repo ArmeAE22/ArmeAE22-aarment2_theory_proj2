@@ -9,7 +9,7 @@ from collections import deque
 
 # Parse Transition function
 def parse_transitions(transitions_list):
-    # Fill a dictionary with (state, input character to transition) as the key, and all valid transitions as values
+    # Dictionary with (state, input character to transition) as the key, and all valid transitions as values
     # Using the a+ example     key: "a" as an input character in "q1"
     #                          value: (loop back to q1, write "a", move head to the right), (transition to q2, write "a", move head to the right)
     transitions = {}
@@ -26,6 +26,7 @@ def parse_transitions(transitions_list):
 
 # Traverse NTM function with BFS
 def traverse_NTM(start, accept, transitions, input_string, flag):
+    # Returns whether the input string is valid, transition path (list of lists) to accept state, 
     
     tree = []   # Tree of possible configurations (state, tape contents, where tape head is)
     start_config = ["", start, input_string] 
@@ -37,15 +38,15 @@ def traverse_NTM(start, accept, transitions, input_string, flag):
         current_config, depth, current_path = queue.popleft()
         max_depth = max(max_depth, depth)
 
-        if depth >= flag:
+        if depth >= flag:   # Checks "termination" flag from command line argument
             return False, None, count, max_depth
         
         left_tape, state, right_tape = current_config
 
-        if state == accept:
+        if state == accept: # Ends search once an accept state is found
             return True, current_path, count, depth
 
-        if right_tape:  # checks if we have reached end of input string
+        if right_tape:  # Checks if we have reached end of input string
             input_char = right_tape[0]
         else:
             input_char = "_"
@@ -77,7 +78,7 @@ def traverse_NTM(start, accept, transitions, input_string, flag):
                     new_left = new_left[:-1]
             elif direction == 'R':
                 if not new_right:
-                    new_right += " "    # Only add _ if it's the end of right side of tape
+                    new_right += " "    # Only add if it's the end of right side of tape
                 else:
                     new_left += new_right[0]
                     new_right = new_right[1:]
@@ -106,6 +107,7 @@ def output(NTM_name, input_string, accept, depth, transitions_count, accepted, p
 
     if accepted:
         print(f"String accepted in {len(path)-1} transitions")
+        # Print each transition that led to accept state
         for config in path:
             left_tape, state, right_tape = config
             if state == accept:
@@ -124,6 +126,7 @@ def main():
     if len(sys.argv) < 3:
         print("USAGE: python3 ./traceTM_aarment2.py {csv file} {termination flag} < {input file}")
         print("\nEXAMPLE: python3 ./traceTM_aarment2.py abc_star.csv 20 < input_abc_star.txt")
+        print("NOTE: Instead of an input file you can just enter input strings one by one when prompted")
         sys.exit(1)
 
     # Command Line arguments
@@ -147,6 +150,7 @@ def main():
     
     transitions = parse_transitions(transitions_list)   # Parse transition function
 
+    # Allows for constant addition of input strings or for a text file stream
     for line in sys.stdin:
         input_string = line.strip()
         accepted, path, transitions_count, max_depth = traverse_NTM(start, accept, transitions, input_string, flag)

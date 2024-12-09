@@ -1,0 +1,43 @@
+ 
+Input_string: aaa
+Depth of Config Tree: 4
+Total Transitions: 7
+String accepted in 4 transitions
+    q1 aaa
+   a q1 aa
+   aa q1 a
+   aaa q2 _
+   aaa_ qacc
+
+ 
+Input_string: aaaaa
+Depth of Config Tree: 6
+Total Transitions: 11
+String accepted in 6 transitions
+    q1 aaaaa
+   a q1 aaaa
+   aa q1 aaa
+   aaa q1 aa
+   aaaa q1 a
+   aaaaa q2 _
+   aaaaa_ qacc
+
+ 
+Input_string: a
+Depth of Config Tree: 2
+Total Transitions: 3
+String accepted in 2 transitions
+    q1 a
+   a q2 _
+   a_ qacc
+
+ 
+Input_string: aa
+Depth of Config Tree: 3
+Total Transitions: 5
+String accepted in 3 transitions
+    q1 aa
+   a q1 a
+   aa q2 _
+   aa_ qacc
+
