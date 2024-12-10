@@ -1,0 +1,147 @@
+[
+    {
+        "NTM_used": "a+",
+        "String_used": "aaa",
+        "Result": "Accepted",
+        "Depth_of_tree": 4,
+        "Number_of_configurations_explored": 7,
+        "Average_nondeterminism": 1.75,
+        "Comments": "String accepted in 4 transitions"
+    },
+    {
+        "NTM_used": "a+",
+        "String_used": "aaaaa",
+        "Result": "Accepted",
+        "Depth_of_tree": 6,
+        "Number_of_configurations_explored": 11,
+        "Average_nondeterminism": 1.8333,
+        "Comments": "String accepted in 6 transitions"
+    },
+    {
+        "NTM_used": "a+",
+        "String_used": "a",
+        "Result": "Accepted",
+        "Depth_of_tree": 2,
+        "Number_of_configurations_explored": 3,
+        "Average_nondeterminism": 1.5,
+        "Comments": "String accepted in 2 transitions"
+    },
+    {
+        "NTM_used": "a+",
+        "String_used": "aa",
+        "Result": "Accepted",
+        "Depth_of_tree": 3,
+        "Number_of_configurations_explored": 5,
+        "Average_nondeterminism": 1.6667,
+        "Comments": "String accepted in 3 transitions"
+    },
+    {
+        "NTM_used": "a*b*c*",
+        "String_used": "abc",
+        "Result": "Accepted",
+        "Depth_of_tree": 4,
+        "Number_of_configurations_explored": 16,
+        "Average_nondeterminism": 4.0,
+        "Comments": "String accepted in 4 transitions"
+    },
+    {
+        "NTM_used": "a*b*c*",
+        "String_used": "aabbcc",
+        "Result": "Accepted",
+        "Depth_of_tree": 7,
+        "Number_of_configurations_explored": 30,
+        "Average_nondeterminism": 4.2857,
+        "Comments": "String accepted in 7 transitions"
+    },
+    {
+        "NTM_used": "a*b*c*",
+        "String_used": "abca",
+        "Result": "Rejected",
+        "Depth_of_tree": 3,
+        "Number_of_configurations_explored": 14,
+        "Average_nondeterminism": 4.6667,
+        "Comments": "String rejected in 3 steps"
+    },
+    {
+        "NTM_used": "a*b*c*",
+        "String_used": "aaa",
+        "Result": "Accepted",
+        "Depth_of_tree": 4,
+        "Number_of_configurations_explored": 14,
+        "Average_nondeterminism": 3.5,
+        "Comments": "String accepted in 4 transitions"
+    },
+    {
+        "NTM_used": "a*b*c*",
+        "String_used": "aabbcbc",
+        "Result": "Rejected",
+        "Depth_of_tree": 5,
+        "Number_of_configurations_explored": 24,
+        "Average_nondeterminism": 4.8,
+        "Comments": "String rejected in 5 steps"
+    },
+    {
+        "NTM_used": "{w | w has the same number of 0's and 1's}",
+        "String_used": "01",
+        "Result": "Accepted",
+        "Depth_of_tree": 5,
+        "Number_of_configurations_explored": 9,
+        "Average_nondeterminism": 1.8,
+        "Comments": "String accepted in 5 transitions"
+    },
+    {
+        "NTM_used": "{w | w has the same number of 0's and 1's}",
+        "String_used": "1010",
+        "Result": "Accepted",
+        "Depth_of_tree": 13,
+        "Number_of_configurations_explored": 21,
+        "Average_nondeterminism": 1.6154,
+        "Comments": "String accepted in 13 transitions"
+    },
+    {
+        "NTM_used": "{w | w has the same number of 0's and 1's}",
+        "String_used": "000",
+        "Result": "Rejected",
+        "Depth_of_tree": 3,
+        "Number_of_configurations_explored": 3,
+        "Average_nondeterminism": 1.0,
+        "Comments": "String rejected in 3 steps"
+    },
+    {
+        "NTM_used": "{w | w has twice the number of 0's as it does 1's}",
+        "String_used": "001",
+        "Result": "Accepted",
+        "Depth_of_tree": 8,
+        "Number_of_configurations_explored": 8,
+        "Average_nondeterminism": 1.0,
+        "Comments": "String accepted in 8 transitions"
+    },
+    {
+        "NTM_used": "{w | w has twice the number of 0's as it does 1's}",
+        "String_used": "000",
+        "Result": "Rejected",
+        "Depth_of_tree": 3,
+        "Number_of_configurations_explored": 3,
+        "Average_nondeterminism": 1.0,
+        "Comments": "String rejected in 3 steps"
+    },
+    {
+        "NTM_used": "{w | w has twice the number of 0's as it does 1's}",
+        "String_used": "0000",
+        "Result": "Rejected",
+        "Depth_of_tree": 4,
+        "Number_of_configurations_explored": 4,
+        "Average_nondeterminism": 1.0,
+        "Comments": "String rejected in 4 steps"
+    },
+    {
+        "NTM_used": "{w | w has twice the number of 0's as it does 1's}",
+        "String_used": "000110",
+        "Result": "Accepted",
+        "Depth_of_tree": 23,
+        "Number_of_configurations_explored": 23,
+        "Average_nondeterminism": 1.0,
+        "Comments": "String accepted in 23 transitions"
+    }
+]
+
