@@ -125,7 +125,7 @@ def main():
     # Error check
     if len(sys.argv) < 3:
         print("USAGE: python3 ./traceTM_aarment2.py {csv file} {termination flag} < {input file}")
-        print("\nEXAMPLE: python3 ./traceTM_aarment2.py abc_star.csv 20 < input_abc_star.txt")
+        print("\nEXAMPLE: python3 ./traceTM_aarment2.py abc_star.csv 20 < input_abc_star_aarment2.txt")
         print("NOTE: Instead of an input file you can just enter input strings one by one when prompted")
         sys.exit(1)
 

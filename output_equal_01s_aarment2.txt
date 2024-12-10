@@ -1,0 +1,38 @@
+ 
+Input_string: 01
+Depth of Config Tree: 5
+Total Transitions: 9
+String accepted in 5 transitions
+    q0 01
+   _ q1 1
+    q3 _x
+   _ q5 x
+   _x q5 _
+   01_ qacc
+
+ 
+Input_string: 1010
+Depth of Config Tree: 13
+Total Transitions: 21
+String accepted in 13 transitions
+    q0 1010
+   _ q2 010
+    q3 _x10
+   _ q4 x10
+   _x q4 10
+   _xx q2 0
+   _x q3 xx
+   _ q3 xxx
+    q3 _xxx
+   _ q5 xxx
+   _x q5 xx
+   _xx q5 x
+   _xxx q5 _
+   1010_ qacc
+
+ 
+Input_string: 000
+Depth of Config Tree: 3
+Total Transitions: 3
+String rejected in 3 steps
+
